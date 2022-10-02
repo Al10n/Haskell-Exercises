@@ -1,0 +1,41 @@
+quadrat = \x -> x*x
+summe_quadrate = \x y -> quadrat x + quadrat y
+summe_quadrate (5-2) (quadrat 3-1)
+
+
+let a=(5-2)					
+    b=(quadrat 3-1)
+      in summe_quadrate a b
+summe_quadrate a b				[(b,quadrat (3-1)),(a,(5-2))]
+(\x y -> quadrat x + quadrat y)	a b		[(b,quadrat (3-1)),(a,(5-2))]
+quadrat a+ quadrat b				[(b,quadrat (3-1)),(a,(5-2))]
+(\x -> x*x) a +(\x -> x*x) b			[(b,quadrat (3-1)),(a,(5-2))]
+(a*^a)+ (b*^b)					[(b,quadrat (3-1)),(a,(5-2))]
+
+	a					[(b,quadrat (3-1)),(a,(5-2))]
+	(5-2)
+	3					[(b,quadrat (3-1)),(a,3)]
+(3*3)+(b*^b)					[(b,quadrat (3-1))]
+9+(b*^b)					[(b,quadrat (3-1))]
+	b
+	quadrat (3-1)
+	let c=(3-1) in quadrat c		[(c,(3-1)),(b,quadrat c)]
+	
+     quadrat c					[(c,(3-1)),(b,quadrat c)]
+      (\x -> x*x) c				[(c,(3-1)),(b,quadrat c)]
+	(c*^c)					[(c,(3-1)),(b,quadrat c)]
+
+	c					[(c,(3-1)),(b,quadrat c)]
+	(3-1)					[(c,(3-1)),(b,quadrat c)]
+	2					[(c,2),(b,quadrat c)]
+		
+	2*2=4					[(b,quadrat 2)]
+9+(b*^b)
+	b
+	quadrat 2				[(b,quadrat 2)]
+	(\x -> x*x) 2				[(b,quadrat 2)]
+	(2*2)
+	4
+9+(4*4) 					[]
+9+16						[]
+25						[]			
